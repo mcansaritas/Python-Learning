@@ -1,0 +1,14 @@
+---
+router1:
+    management_address: 10.10.10.1
+    router_name: Router1
+    system_interface: 10.10.10.100
+    bgp_peers:
+        - 1.1.1.1
+        - 2.2.2.2
+router2:
+    management_address: 10.10.10.2
+    router_name: Router2
+    system_interface: 10.10.10.101
+    bgp_peers: [1.1.1.2, 2.2.2.3]
+router3: {management_address: 10.10.10.3, router_name: Router3}

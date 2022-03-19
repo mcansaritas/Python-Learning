@@ -1,0 +1,31 @@
+    bgp
+        group {{router1["group_name"]}}
+			{%- if router1["ipv6_peering"] %}
+            family ipv4 ipv6
+			{%- else %}
+			family ipv4
+			{%- endif %}
+            type external			
+			neighbor {{router1["neighbor"]}}
+				import {{router1["import_policy"]}}
+				export {{router1["export_policy"]}}
+				peer-as {{router1["peer_as"]}}
+				{%- if router1["bfd_enable"] %}
+				bfd-enable
+				{%- endif %}
+			exit
+        group {{router2["group_name"]}}
+			{%- if router2["ipv6_peering"] %}
+            family ipv4 ipv6
+			{%- else %}
+			family ipv4
+			{%- endif %}
+            type external			
+			neighbor {{router2["neighbor"]}}
+				import {{router2["import_policy"]}}
+				export {{router2["export_policy"]}}
+				peer-as {{router2["peer-as"]}}
+				{%- if router2["bfd-enable"] %}
+				bfd-enable
+				{%- endif %}
+			exit

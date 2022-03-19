@@ -1,0 +1,12 @@
+---
+router1: 10.10.10.100
+router2: 10.10.10.101
+router3: 10.10.10.102
+router4: This is a longer string for our YAML Python testing code, and it writes
+router5: true
+router6: false
+router7: no
+router8: yes
+router9: on
+router10: off
+router11: 12345

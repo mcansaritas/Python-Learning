@@ -1,0 +1,14 @@
+    bgp
+        group {{group_name}}
+            family ipv4
+            type external
+            neighbor {{neighbor_ip1}}
+                import {{import_policy1}}
+                export {{export_policy1}}
+                peer-as {{peer_as1}}
+            exit
+            neighbor {{neighbor_ip2}}
+                import {{import_policy2}}
+                export {{export_policy2}}
+                peer-as {{peer_as2}}
+            exit

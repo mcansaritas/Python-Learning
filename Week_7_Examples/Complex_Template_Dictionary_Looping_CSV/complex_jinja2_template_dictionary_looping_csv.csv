@@ -1,0 +1,3 @@
+routers,group_name,import_policy,export_policy,peer_as,neighbors,ipv6_peering,bfd_enable
+router1,iBGP Neighbors,Import_Policy,Export_Policy,65535,1.1.1.1 2.2.2.2,TRUE,TRUE
+router2,eBGP Neighbors,Import,Export,2000,1.1.1.2 2.2.2.3,FALSE,FALSE

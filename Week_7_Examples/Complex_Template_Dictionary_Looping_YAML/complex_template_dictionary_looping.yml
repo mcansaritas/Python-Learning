@@ -1,0 +1,22 @@
+---
+routers:
+ router1:
+  group_name: iBGP Neighbors
+  import_policy: Import_Policy
+  export_policy: Export_Policy
+  peer_as: 65535
+  neighbors:
+   - 1.1.1.1
+   - 2.2.2.2
+  ipv6_peering: true
+  bfd_enable: true
+ router2:
+  group_name: iBGP Neighbors
+  import_policy: Import_Policy
+  export_policy: Export_Policy
+  peer_as: 65535
+  neighbors:
+   - 1.1.1.2
+   - 2.2.2.3
+  ipv6_peering: false
+  bfd_enable: false

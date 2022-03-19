@@ -1,0 +1,19 @@
+    bgp
+		{%- for keys, values in routers.items() %}
+		group {{ values.group_name }}
+			{%- if values.ipv6_peering %}
+            family ipv4 ipv6
+			{%- else %}
+			family ipv4
+			{%- endif %}
+			type external
+		{%- for neighbor in values.neighbors %}
+				neighbor {{ neighbor }}
+					import {{ values.import_policy }}
+					export {{ values.export_policy }}
+					peer-as {{ values.peer_as }}
+					{%- if values.bfd_enable %}
+					bfd-enable
+					{%- endif %}
+		{%- endfor %}
+		{%- endfor %}

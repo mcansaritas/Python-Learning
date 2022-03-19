@@ -1,2 +1,2 @@
 # Python-Learning
-These are my codes to improve my Python knowledge
+These are my line of codes to improve my Python skills

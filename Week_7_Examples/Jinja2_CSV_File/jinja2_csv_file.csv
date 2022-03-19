@@ -1,0 +1,2 @@
+group_name,ipv6_peering,bgp_neighbor,import_policy,export_policy,peer_as,bfd-enable
+iBGP_Neigbors,True,1.1.1.1 2.2.2.2,Import_Policy,Export_Policy,65535,True

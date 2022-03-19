@@ -1,0 +1,1 @@
+This file is testing purposes of Python built-in open method.

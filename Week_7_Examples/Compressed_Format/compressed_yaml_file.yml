@@ -1,0 +1,14 @@
+router1:
+  bgp_peers:
+  - 1.1.1.1
+  - 2.2.2.2
+  manaagement_address: 10.10.10.1
+  router_name: Router1
+  system_interface: 10.10.10.100
+router2:
+  bgp_peers:
+  - 1.1.1.2
+  - 2.2.2.3
+  manaagement_address: 10.10.10.2
+  router_name: Router2
+  system_interface: 10.10.10.101

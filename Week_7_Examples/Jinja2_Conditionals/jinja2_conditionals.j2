@@ -1,0 +1,18 @@
+    bgp
+        group {{group_name}}
+			{%- if ipv6_peering %}
+            family ipv4 ipv6
+			{%- else %}
+			family ipv4
+			{%- endif %}
+            type external
+			{%- for neighbor in bgp_neighbor %}				
+			neighbor {{neighbor}}
+				import {{import_policy}}
+				export {{export_policy}}
+				peer-as {{peer_as}}
+				{%- if bfd_enable %}
+				bfd-enable
+				{%- endif %}
+			exit
+			{%- endfor %}
